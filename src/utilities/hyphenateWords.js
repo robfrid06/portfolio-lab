@@ -1,0 +1,1 @@
+export const hyphenator = (str) => str.toLowerCase().replaceAll(' ', '-').replaceAll("'", '').replaceAll('_', '-')
