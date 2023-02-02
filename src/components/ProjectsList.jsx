@@ -2,7 +2,7 @@ import ProjectPreview from "./ProjectPreview";
 
 const ProjectsList = ({projects}) => {
   return (
-      <div>
+      <div className="projects-container">
         {projects.map(project => (
           <ProjectPreview project={project} key={project.id} />
         ))}

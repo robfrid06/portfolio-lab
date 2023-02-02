@@ -3,10 +3,12 @@ import ProjectsList from "../components/ProjectsList";
 
 const Projects = () => {
   return (
-    <main>
-      <h1>Projects</h1>
-      <ProjectsList projects={projects} />
-    </main>
+    <div className="page-section">
+      <section id="projects">
+        <h1>Projects</h1>
+        <ProjectsList projects={projects} />
+      </section>
+    </div>
   );
 }
  

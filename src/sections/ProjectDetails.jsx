@@ -1,4 +1,3 @@
-import { projects } from "../data/projects";
 import { projectFinder } from "../utilities/findProject";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -12,9 +11,13 @@ const ProjectDetails = () => {
     <main>
       <h1>{project.title}</h1>
       <p>{project.description}</p>
-      <img src={project.image} alt={project.title} />
-      <Link to={project.repositoryLink}><i className="devicon-github-original colored"></i></Link>
-      <Link to={project.deploymentLink}>App</Link>
+      <div className="screenshot">
+        <img src={project.image} alt={project.title} />
+      </div>
+      <div className="links-container">
+        <a href={project.repositoryLink} target="_blank" rel="noreferrer"><i className="devicon-github-original"></i></a>
+        <a href={project.deploymentLink} target="_blank" rel="noreferrer"><i className="fas fa-regular fa-globe"></i></a>
+      </div>
     </main>
   );
 }
